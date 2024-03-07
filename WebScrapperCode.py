@@ -11,4 +11,5 @@ league_city_daily = soup.find_all("li", class_="display:inline")
 for weather in league_city_daily:
     info = {}
     info['Day'] = weather.find("p", class_="headerV3-DS-EntryPoint1-1")
-    info['High'] = weather.find("topTemp-E1_1 temp")
+    info['High'] = weather.find("div", class_="topTemp-DS-EntryPoint1-1 temp-D5-EntryPoint1-1")
+    info['Low'] = weather.find("div", class_="temp-DS-EntryPoint1-1")
